@@ -9,7 +9,7 @@ const ProtectedRoute = ({ component: Component, children, ...rest }) => {
         <Route
             {...rest}
             render={(props) => {
-                if (!isLoggeIn) {
+                if (isLoggeIn) {
                     return (
                         <Redirect
                             to={{
